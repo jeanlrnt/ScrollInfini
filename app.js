@@ -14,7 +14,7 @@ async function fetchData() {
         const responseData = await response.json()
 
         if (!responseData.total) {
-            throw new Error(`No results found for ${searchQuery}`)
+            throw new Error(`No results found for ${searchQuery}, try something else.`)
         }
 
         createImages(responseData.results)
